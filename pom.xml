@@ -33,7 +33,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-<<<<<<< HEAD
 =======
 
 		<!--- Para Transactional-.-->
@@ -72,8 +71,6 @@
 			<scope>provided</scope>
 		</dependency>
 
-
->>>>>>> Listar Usuarios y Conexion DB MYSql
 	</dependencies>
 
 	<build>
