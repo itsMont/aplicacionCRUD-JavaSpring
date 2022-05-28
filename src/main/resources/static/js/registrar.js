@@ -1,7 +1,6 @@
-
-document.onload = registrarUsuario();
-
-
+$(document).ready(function() {
+  //  Registar usuario
+});
 async function registrarUsuario() {
   let datos = {};
   datos.nombre = document.getElementById('txtNombre').value;
@@ -22,8 +21,8 @@ async function registrarUsuario() {
       'Accept': 'application/json',
       'Content-Type': 'application/json'
     },
+    body: JSON.stringify(datos)
   });
-  alert("La cuenta fue creada con exito!");
-  window.location.href = 'login.html'
-
+  alert("Has creado con éxito tu cuenta, " + datos.nombre );
+  window.location.href = "login.html";
 }

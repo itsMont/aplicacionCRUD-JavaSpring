@@ -18,10 +18,12 @@ async function iniciarSesion() {
   });
 
   const respuesta = await request.text();
-  if (respuesta != 'FAIL') {
+  if (respuesta != 'Error') {
     localStorage.token = respuesta;
     localStorage.email = datos.email;
-    window.location.href = 'usuarios.html'
+    alert("Has ingresado correctamente");
+    window.location.href = 'usuarios.html';
+    console.log(respuesta);
   } else {
     alert("Las credenciales son incorrectas. Por favor intente nuevamente.");
   }

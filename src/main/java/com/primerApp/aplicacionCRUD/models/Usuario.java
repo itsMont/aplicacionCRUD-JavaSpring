@@ -6,17 +6,16 @@ import lombok.Setter;
 import lombok.ToString;
 import org.springframework.context.annotation.Primary;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+
 @Entity
 @Table(name="Usuarios")
 @ToString @EqualsAndHashCode
 public class Usuario {
     @Id //Indica clave Primaria
-    @Getter @Setter @Column(name = "id")
-    private long id;
+    @Getter @Setter @Column(name = "id", unique = true)
+    @GeneratedValue(strategy = GenerationType.AUTO) // Auto_Increment
+    private Long id;
     @Getter @Setter @Column(name = "nombre")
     private String nombre;
     @Getter @Setter @Column(name = "apellido")
